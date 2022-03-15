@@ -1,0 +1,5 @@
+fn main() -> unit
+{
+  let x: int = 2 + 5;
+  2 + 3 + x
+}

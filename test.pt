@@ -1,0 +1,11 @@
+fn main() -> unit {
+  let x: int = 1;
+  let y: int = x + 1;
+  let z: int = y + x;
+  print_int(x + y + z);
+  if true then {
+    print_bool(true)
+  } else {
+    print_bool(false)
+  }
+}

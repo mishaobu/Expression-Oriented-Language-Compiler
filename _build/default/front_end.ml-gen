@@ -1,0 +1,14 @@
+(** @canonical Front_end.Ast *)
+module Ast = Front_end__Ast
+
+
+(** @canonical Front_end.Error *)
+module Error = Front_end__Error
+
+
+(** @canonical Front_end.Parser *)
+module Parser = Front_end__Parser
+
+
+(** @canonical Front_end.Scanner *)
+module Scanner = Front_end__Scanner

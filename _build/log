@@ -1,0 +1,140 @@
+# dune exec ./patina.exe newtests/test0.pt
+# OCAMLPARAM: unset
+# Workspace root: /fs/student/mobukhov/cs160/lab5
+$ /usr/bin/nproc > /tmp/dune53f481.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /fs/student/mobukhov/.opam/cs160/bin/ocamlc.opt -config > /tmp/dune6fa58e.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path =
+#      Some External "/fs/student/mobukhov/.opam/cs160/lib/toplevel"
+#  ; ocaml_bin = External "/fs/student/mobukhov/.opam/cs160/bin"
+#  ; ocaml = Ok External "/fs/student/mobukhov/.opam/cs160/bin/ocaml"
+#  ; ocamlc = External "/fs/student/mobukhov/.opam/cs160/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/fs/student/mobukhov/.opam/cs160/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/fs/student/mobukhov/.opam/cs160/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/fs/student/mobukhov/.opam/cs160/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/fs/student/mobukhov/.opam/cs160/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/fs/student/mobukhov/.opam/cs160/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/fs/student/mobukhov/cs160/lab5"
+#        ; "INSIDE_DUNE" : "/fs/student/mobukhov/cs160/lab5/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/fs/student/mobukhov/cs160/lab5/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/fs/student/mobukhov/cs160/lab5/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/fs/student/mobukhov/cs160/lab5/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/fs/student/mobukhov/.opam/cs160/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.0"
+#      ; standard_library_default =
+#          "/fs/student/mobukhov/.opam/cs160/lib/ocaml"
+#      ; standard_library = "/fs/student/mobukhov/.opam/cs160/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+# Workspace root: /fs/student/mobukhov/cs160/lab5
+$ (cd _build/default && .ppx/0bb5094b13567c3c4e1ee33245b80e63/ppx.exe --cookie 'library-name="back_end"' -o optimize.pp.ml --impl optimize.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamldep.opt -modules -impl optimize.pp.ml) > _build/default/.back_end.objs/optimize.pp.ml.d
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .back_end.objs/byte -I /fs/student/mobukhov/.opam/cs160/lib/ppx_deriving/runtime -I /fs/student/mobukhov/.opam/cs160/lib/result -I .front_end.objs/byte -no-alias-deps -opaque -open Back_end -o .back_end.objs/byte/back_end__Optimize.cmo -c -impl optimize.pp.ml)
+> File "optimize.ml", line 22, characters 33-34:
+> 22 |             | Some (a, b) -> let t, v = a, b in
+>                                       ^
+> Warning 27 [unused-var-strict]: unused variable t.
+> File "optimize.ml", line 42, characters 19-22:
+> 42 | and compile_binary env recur op e1 e2 e: expr =
+>                         ^^^
+> Warning 27 [unused-var-strict]: unused variable env.
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .back_end.objs/byte -I .back_end.objs/native -I /fs/student/mobukhov/.opam/cs160/lib/ppx_deriving/runtime -I /fs/student/mobukhov/.opam/cs160/lib/result -I .front_end.objs/byte -I .front_end.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Back_end -o .back_end.objs/native/back_end__Optimize.cmx -c -impl optimize.pp.ml)
+> File "optimize.ml", line 22, characters 33-34:
+> 22 |             | Some (a, b) -> let t, v = a, b in
+>                                       ^
+> Warning 27 [unused-var-strict]: unused variable t.
+> File "optimize.ml", line 42, characters 19-22:
+> 42 | and compile_binary env recur op e1 e2 e: expr =
+>                         ^^^
+> Warning 27 [unused-var-strict]: unused variable env.
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -a -o back_end.cmxa .back_end.objs/native/back_end.cmx .back_end.objs/native/back_end__Typecheck.cmx .back_end.objs/native/back_end__Optimize.cmx)
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .patina.eobjs/byte -I /fs/student/mobukhov/.opam/cs160/lib/ppx_deriving/runtime -I /fs/student/mobukhov/.opam/cs160/lib/result -I .back_end.objs/byte -I .front_end.objs/byte -no-alias-deps -opaque -o .patina.eobjs/byte/dune__exe__Patina.cmo -c -impl patina.ml)
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .patina.eobjs/byte -I .patina.eobjs/native -I /fs/student/mobukhov/.opam/cs160/lib/ppx_deriving/runtime -I /fs/student/mobukhov/.opam/cs160/lib/result -I .back_end.objs/byte -I .back_end.objs/native -I .front_end.objs/byte -I .front_end.objs/native -intf-suffix .ml -no-alias-deps -opaque -o .patina.eobjs/native/dune__exe__Patina.cmx -c -impl patina.ml)
+$ (cd _build/default && /fs/student/mobukhov/.opam/cs160/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -o patina.exe /fs/student/mobukhov/.opam/cs160/lib/result/result.cmxa /fs/student/mobukhov/.opam/cs160/lib/ppx_deriving/runtime/ppx_deriving_runtime.cmxa front_end.cmxa back_end.cmxa .patina.eobjs/native/dune__exe__Patina.cmx)

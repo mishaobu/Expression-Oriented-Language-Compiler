@@ -1,0 +1,6 @@
+(** @canonical Back_end.Optimize *)
+module Optimize = Back_end__Optimize
+
+
+(** @canonical Back_end.Typecheck *)
+module Typecheck = Back_end__Typecheck

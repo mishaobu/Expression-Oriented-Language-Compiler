@@ -1,0 +1,22 @@
+(env
+ (dev
+  (flags (:standard -warn-error -A))))
+
+(library
+  (name front_end)
+  (preprocess (pps ppx_deriving.show ppx_deriving.eq))
+  (modules scanner parser ast error))
+
+(library
+ (name back_end)
+ (preprocess (pps ppx_deriving.show))
+ (libraries front_end)
+ (modules typecheck optimize))
+
+(executable
+ (name patina)
+ (libraries front_end back_end)
+ (modules patina))
+
+(ocamllex scanner)
+(ocamlyacc parser)
