@@ -19,3 +19,23 @@ Here is a brief example of a program that can be compiled:
 	x-1
 }
 ~~~
+
+Not only will the program be compiled, but this compiler automatically performs some optimizations on the input code including [Constant Folding](https://en.wikipedia.org/wiki/Constant_folding) and [Constant Propogation](https://cran.r-project.org/web/packages/rco/vignettes/opt-constant-propagation.html).
+
+---
+
+Instructions to execute on MacOS:
+
+1. Install dependencies:
+~~~
+brew install gpatch
+brew install opam
+
+opam switch create compiler ocaml-base-compiler.4.13.0
+opam install dune
+eval $(opam env)
+~~~
+2. Compile the Patina program. Some examples exist in the "tests" folder.
+~~~
+ dune exec ./patina.exe -- <filename>
+~~~
